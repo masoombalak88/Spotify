@@ -48,8 +48,8 @@ def music_start_panel(_):
         ],
         [
             InlineKeyboardButton(text="˹❍ᴡɴᴇꝛ˼", user_id=config.OWNER_ID),
-            InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ 🥀", callback_data="support"),
+            InlineKeyboardButton(text="❍ sᴜᴘᴘᴏʀᴛ ❍", callback_data="support"),
         ],
-        [InlineKeyboardButton(text="˹ᴍᴏᴅᴇ˼", callback_data="feature")],
+        [InlineKeyboardButton(text="❍ ᴍᴏᴅᴇ ❍", callback_data="feature")],
     ]
     return buttons
