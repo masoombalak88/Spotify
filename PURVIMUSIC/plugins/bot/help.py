@@ -449,29 +449,6 @@ async def tools_callback_cb(client, CallbackQuery, _):
         await CallbackQuery.edit_message_text(helpers.THELP_12, reply_markup=keyboard)
 
 
-@app.on_callback_query(filters.regex("developer"))
-async def about_callback(client: Client, callback_query: CallbackQuery):
-    buttons = [
-        [
-            InlineKeyboardButton(text="❍ᴡɴᴇꝛ", user_id=config.OWNER_ID[0]),
-            InlineKeyboardButton(
-                text="sᴜᴅᴏᴇʀs", url=f"https://t.me/{app.username}?start=sudo"
-            ),
-        ],
-        [
-            InlineKeyboardButton(text="˹ꜱʏꜱᴛᴇᴍ˼", url=f"https://t.me/APNA_SYSTEM"),
-            InlineKeyboardButton(text="˹ʟᴏᴠᴇ ɪɴ ᴛɪᴍᴇ˼", url=f"http://t.me/love_in_timeee"),
-        ],
-        [
-            InlineKeyboardButton(text="Back", callback_data="about")
-        ],  # Use a default label for the back button
-    ]
-    await callback_query.message.edit_text(
-        "✦ **ᴛʜɪs ʙᴏᴛ ɪs ᴍᴀᴅᴇ ʙʏ ᴀ sᴋɪʟʟᴇᴅ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ ᴍᴀᴋᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀsʏ ᴛᴏ ᴍᴀɴᴀɢᴇ ᴀɴᴅ ᴍᴏʀᴇ ғᴜɴ.**\n\n✦ **ᴡɪᴛʜ ᴊᴜsᴛ ᴀ ғᴇᴡ ᴄʟɪᴄᴋs, ʏᴏᴜ ᴄᴀɴ ᴄᴏɴᴛʀᴏʟ ᴇᴠᴇʀʏᴛʜɪɴɢ—ʟɪᴋᴇ sᴇᴛᴛɪɴɢ ᴜᴘ ᴏᴡɴᴇʀ sᴇᴛᴛɪɴɢs, ᴄʜᴇᴄᴋɪɴɢ sᴜᴅᴏᴇʀs, ᴀɴᴅ ᴇᴠᴇɴ ᴇxᴘʟᴏʀɪɴɢ ɪɴsᴛᴀɢʀᴀᴍ ᴀɴᴅ ʏᴏᴜᴛᴜʙᴇ.**\n\n✦ **ᴛʜᴇ ʙᴏᴛ ɪs ᴅᴇsɪɢɴᴇᴅ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴍᴏᴏᴛʜʟʏ ᴀɴᴅ ᴇɴᴊᴏʏ ᴍᴜsɪᴄ ᴛᴏᴏ. ᴊᴜsᴛ ᴜsᴇ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ᴀɴᴅ sᴇᴇ ʜᴏᴡ ᴇᴀsʏ ɪᴛ ɪs!**",
-        reply_markup=InlineKeyboardMarkup(buttons),
-    )
-
-
 @app.on_callback_query(filters.regex("feature"))
 async def feature_callback(client: Client, callback_query: CallbackQuery):
     keyboard = [
@@ -666,7 +643,7 @@ async def feature_callback(client: Client, callback_query: CallbackQuery):
     keyboard = [
         [
             InlineKeyboardButton(
-                text="⚜️ ᴋɪᴅɴᴀᴘ ᴍᴇ ɪɴ ɴᴇᴡ ɢʀᴏᴜᴘ ᴏʀ ᴄʜᴀɴɴᴇʟ ⚜️",
+                text="❍ ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ ❍",
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
         ],
@@ -676,7 +653,7 @@ async def feature_callback(client: Client, callback_query: CallbackQuery):
         ],
         [
             InlineKeyboardButton(text="ᴛσσʟs", callback_data="tools"),
-            InlineKeyboardButton(text="ᴀʟʟ", callback_data="settings_back_helper"),
+            InlineKeyboardButton(text="❍ ʀᴇᴘᴏ ❍", callback_data="gib_source"),
         ],
         [InlineKeyboardButton(text="✯ ʜᴏᴍᴇ ✯", callback_data="go_to_start")],
     ]
@@ -746,12 +723,12 @@ async def back_button_callback(client: Client, callback_query: CallbackQuery):
         [
             InlineKeyboardButton(text="❍ᴡɴᴇꝛ", user_id=config.OWNER_ID),
             InlineKeyboardButton(
-                text="ɢɪᴛʜᴜʙ",
+                text="❍ ʀᴇᴘᴏ ❍",
                 url="https://t.me/APNA_SYSTEM",
             ),
         ],
         [
-            InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=f"{config.SUPPORT_GROUP}"),
+            InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=f"{config.SUPPORT_CHAT}"),
             InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=f"{config.SUPPORT_CHANNEL}"),
         ],
         [InlineKeyboardButton(text="✯ ʜᴏᴍᴇ ✯", callback_data="go_to_start")],
