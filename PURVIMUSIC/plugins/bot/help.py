@@ -3,7 +3,7 @@ from pyrogram import Client, filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message, InlineKeyboardButton
 from PURVIMUSIC import app
 from PURVIMUSIC.utils import help_pannel
-from PURVIMUSIC.utils.database import get_lang, is_commanddelete_on
+from PURVIMUSIC.utils.database import get_lang 
 from PURVIMUSIC.utils.decorators.language import LanguageStart, languageCB
 from PURVIMUSIC.utils.inline.help import help_back_markup, private_help_panel
 import config
