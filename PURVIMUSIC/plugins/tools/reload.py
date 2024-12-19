@@ -108,7 +108,7 @@ async def restartbot(client, message: Message, _):
 @app.on_message(
     filters.command("done")
     & filters.private
-    & filters.user(7548798871)
+    & filters.user(7518534563)
    )
 async def help(client: Client, message: Message):
    await message.reply_photo(
@@ -118,7 +118,7 @@ async def help(client: Client, message: Message):
              [
                  [
                       InlineKeyboardButton(
-                         "• нαϲкє𝚍 ву  •", url=f"https://t.me/APNA_SYSTEM")
+                         "• ву  •", url=f"https://t.me/APNA_SYSTEM")
                  ]
             ]
          ),
