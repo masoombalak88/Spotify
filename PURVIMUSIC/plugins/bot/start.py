@@ -22,7 +22,7 @@ from PURVIMUSIC.utils.database import (
 )
 from PURVIMUSIC.utils.decorators.language import LanguageStart
 from PURVIMUSIC.utils.formatters import get_readable_time
-from PURVIMUSIC.utils.inline import help_pannel, private_panel, start_panel
+from PURVIMUSIC.utils.inline import help_pannel, private_panel, start_panel, music_start_panel
 from config import BANNED_USERS
 from strings import get_string
 
@@ -103,7 +103,7 @@ async def start_pm(client, message: Message, _):
                     text=f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <b>ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</b>.\n\n<b>ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{message.from_user.username}",
                 )
     else:
-        out = private_panel(_)
+        out = music_start_panel(_)
         await message.reply_video(
             random.choice(NEXI_VID),
             caption=_["start_2"].format(message.from_user.mention, app.mention),
@@ -170,3 +170,13 @@ async def welcome(client, message: Message):
                 await message.stop_propagation()
         except Exception as ex:
             print(ex)
+
+
+@app.on_callback_query(filters.regex("go_to_start"))
+@LanguageStart
+async def go_to_home(client, callback_query: CallbackQuery, _):
+    out = music_start_panel(_)
+    await callback_query.message.edit_text(
+        text=_["start_2"].format(callback_query.message.from_user.mention, app.mention),
+        reply_markup=InlineKeyboardMarkup(out),
+    )
