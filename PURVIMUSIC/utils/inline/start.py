@@ -36,3 +36,20 @@ def private_panel(_):
         ],
     ]
     return buttons
+
+
+def music_start_panel(_):
+    buttons = [
+        [
+            InlineKeyboardButton(
+                text="💠 ᴀᴅᴅ ᴍᴇ ɪɴ ɴᴇᴡ ɢʀᴏᴜᴘ 💠",
+                url=f"https://t.me/{app.username}?startgroup=true",
+            )
+        ],
+        [
+            InlineKeyboardButton(text="˹❍ᴡɴᴇꝛ˼", user_id=config.OWNER_ID),
+            InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ 🥀", callback_data="support"),
+        ],
+        [InlineKeyboardButton(text="˹ᴍᴏᴅᴇ˼", callback_data="feature")],
+    ]
+    return buttons
