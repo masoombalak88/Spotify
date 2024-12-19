@@ -174,6 +174,69 @@ async def music_callback(client: Client, callback_query: CallbackQuery):
     )
 
 
+@app.on_callback_query(filters.regex("management"))
+async def management_callback(client: Client, callback_query: CallbackQuery):
+    keyboard = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    text="єxᴛʀᴧ", callback_data="management_callback extra"
+                )
+            ],
+            [
+                InlineKeyboardButton(
+                    text="ʙᴧη", callback_data="management_callback hb1"
+                ),
+                InlineKeyboardButton(
+                    text="ᴋɪᴄᴋs", callback_data="management_callback hb2"
+                ),
+                InlineKeyboardButton(
+                    text="ϻυᴛє", callback_data="management_callback hb3"
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    text="ᴘɪη", callback_data="management_callback hb4"
+                ),
+                InlineKeyboardButton(
+                    text="sᴛᴧғғ", callback_data="management_callback hb5"
+                ),
+                InlineKeyboardButton(
+                    text="sєᴛ υᴘ", callback_data="management_callback hb6"
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    text="zσϻʙɪє", callback_data="management_callback hb7"
+                ),
+                InlineKeyboardButton(
+                    text="ɢᴧϻє", callback_data="management_callback hb8"
+                ),
+                InlineKeyboardButton(
+                    text="ɪϻᴘσsᴛєʀ", callback_data="management_callback hb9"
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    text="sᴧηɢ ϻᴧᴛᴧ", callback_data="management_callback hb10"
+                ),
+                InlineKeyboardButton(
+                    text="ᴛʀᴧηsʟᴧᴛє", callback_data="management_callback hb11"
+                ),
+                InlineKeyboardButton(
+                    text="ᴛ-ɢʀᴧᴘʜ", callback_data="management_callback hb12"
+                ),
+            ],
+            [InlineKeyboardButton(text="✯ ʙᴀᴄᴋ ✯", callback_data=f"feature")],
+        ]
+    )
+
+    await callback_query.message.edit(
+        f"``**Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ.  Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.](t.me/tg_friendsss)**\n\n**Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /**``",
+        reply_markup=keyboard,
+    )
+
+
 @app.on_callback_query(filters.regex("tools"))
 async def tools_callback(client: Client, callback_query: CallbackQuery):
     keyboard = InlineKeyboardMarkup(
@@ -215,3 +278,28 @@ async def tools_callback(client: Client, callback_query: CallbackQuery):
         f"``**Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ.  Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.](t.me/tg_friendsss)**\n\n**Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /**``",
         reply_markup=keyboard,
     )
+
+
+# If the back button has different meanings in various panels, you can set different callbacks
+@app.on_callback_query(filters.regex("support"))
+async def back_button_callback(client: Client, callback_query: CallbackQuery):
+    keyboard = [
+        [
+            InlineKeyboardButton(text="❍ᴡɴᴇꝛ", user_id=config.OWNER_ID[0]),
+            InlineKeyboardButton(
+                text="ɢɪᴛʜᴜʙ",
+                url="https://t.me/APNA_SYSTEM",
+            ),
+        ],
+        [
+            InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=f"{config.SUPPORT_GROUP}"),
+            InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=f"{config.SUPPORT_CHANNEL}"),
+        ],
+        [InlineKeyboardButton(text="✯ ʜᴏᴍᴇ ✯", callback_data="go_to_start")],
+    ]
+
+    await callback_query.message.edit_text(
+        "**๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴍᴇ**\n\n**ɪғ ʏᴏᴜ ғɪɴᴅ ᴀɴʏ ᴇʀʀᴏʀ ᴏʀ ʙᴜɢ ᴏɴ ʙᴏᴛ ᴏʀ ᴡᴀɴᴛ ᴛᴏ ɢɪᴠᴇ ᴀɴʏ ғᴇᴇᴅʙᴀᴄᴋ ᴀʙᴏᴜᴛ ᴛʜᴇ ʙᴏᴛ ᴛʜᴇɴ ʏᴏᴜ ᴀʀᴇ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ  (✿◠‿◠)**",
+        reply_markup=InlineKeyboardMarkup(keyboard),
+    )
+
