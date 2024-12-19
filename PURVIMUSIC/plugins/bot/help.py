@@ -286,9 +286,9 @@ async def back_button_callback(client: Client, callback_query: CallbackQuery):
     keyboard = [
         [
             InlineKeyboardButton(text="❍ᴡɴᴇꝛ", user_id=config.OWNER_ID),
-            InlineKeyboardButton(
-                InlineKeyboardButton(text=_["S_B_7"], callback_data="gib_source"),
+            InlineKeyboardButton(text=_["S_B_7"], callback_data="gib_source"),
         ],
+                
         [
             InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=f"{config.SUPPORT_GROUP}"),
             InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=f"{config.SUPPORT_CHANNEL}"),
