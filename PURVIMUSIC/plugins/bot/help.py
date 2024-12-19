@@ -106,7 +106,7 @@ async def feature_callback(client: Client, callback_query: CallbackQuery):
         ],
         [
             InlineKeyboardButton(text="ᴛᴏᴏʟs", callback_data="tools"),
-            InlineKeyboardButton(text="ᴀʟʟ", callback_data="settings_back_helper"),
+            InlineKeyboardButton(text="❍ ʀᴇᴘᴏ ❍", callback_data="gib_source"),
         ],
         [InlineKeyboardButton(text="✯ ʜᴏᴍᴇ ✯", callback_data="go_to_start")],
     ]
@@ -286,7 +286,10 @@ async def back_button_callback(client: Client, callback_query: CallbackQuery):
     keyboard = [
         [
             InlineKeyboardButton(text="❍ᴡɴᴇꝛ", user_id=config.OWNER_ID),
-            InlineKeyboardButton(text=_["S_B_7"], callback_data="gib_source"),
+            InlineKeyboardButton(
+                text="❍ ʀᴇᴘᴏ ❍",
+                url="https://t.me/APNA_SYSTEM",
+            ),
         ],
                 
         [
