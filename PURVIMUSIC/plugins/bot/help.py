@@ -1,7 +1,7 @@
 import re
 from typing import Union
 from pyrogram import Client, filters, types
-from pyrogram.types import InlineKeyboardMarkup, Message, InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup, Message, InlineKeyboardButton, CallbackQuery,
 from PURVIMUSIC import app
 from PURVIMUSIC.utils import help_pannel
 from PURVIMUSIC.utils.database import get_lang 
