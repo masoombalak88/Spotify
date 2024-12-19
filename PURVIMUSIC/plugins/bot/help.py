@@ -1,13 +1,14 @@
 from typing import Union
-from pyrogram import filters, types
+from pyrogram import Client, filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message, InlineKeyboardButton
 from PURVIMUSIC import app
 from PURVIMUSIC.utils import help_pannel
-from PURVIMUSIC.utils.database import get_lang
+from PURVIMUSIC.utils.database import get_lang, is_commanddelete_on
 from PURVIMUSIC.utils.decorators.language import LanguageStart, languageCB
 from PURVIMUSIC.utils.inline.help import help_back_markup, private_help_panel
+import config
 from config import BANNED_USERS, START_IMG_URL, SUPPORT_CHAT
-from strings import get_string, helpers
+from strings import get_command, get_string, helpers
 from PURVIMUSIC.utils.stuffs.buttons import BUTTONS
 from PURVIMUSIC.utils.stuffs.helper import Helper
 
