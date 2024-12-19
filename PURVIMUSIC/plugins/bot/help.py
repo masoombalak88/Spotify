@@ -9,7 +9,7 @@ import config
 from config import BANNED_USERS, START_IMG_URL
 from strings import get_command, get_string
 from PURVIMUSIC import app
-from PURVIMUSIC.utils.database import get_lang, is_commanddelete_on
+from PURVIMUSIC.utils.database import get_lang
 from PURVIMUSIC.utils.decorators.language import LanguageStart
 from PURVIMUSIC.utils.inline.help import private_help_panel
 
