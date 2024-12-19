@@ -8,7 +8,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, 
 import config
 from config import BANNED_USERS, START_IMG_URL
 from strings import get_command, get_string
-from VIPMUSIC import HELPABLE, app
+from VIPMUSIC import app
 from VIPMUSIC.utils.database import get_lang, is_commanddelete_on
 from VIPMUSIC.utils.decorators.language import LanguageStart
 from VIPMUSIC.utils.inline.help import private_help_panel
