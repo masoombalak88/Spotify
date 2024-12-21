@@ -122,7 +122,8 @@ STRING5 = getenv("STRING_SESSION5", None)
 STRING6 = getenv("STRING_SESSION6", None)
 STRING7 = getenv("STRING_SESSION7", None)
 
-DKPV = [
+# Bot introduction messages - These can be customized as per your preference
+AYU = [
     "💞", "🦋", "🔍", "🧪", "🦋", "⚡️", "🔥", "🦋", "🎩", "🌈", "🍷", "🥂", "🦋", "🥃", "🥤", "🕊️",
     "🦜", "🐝", "🕊️", "🧪", "🕊️", "🔎", "🦋", "🎶", "🪄", "💌", "🌡️", "🦜", "🧨"
 ]
