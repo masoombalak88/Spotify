@@ -22,7 +22,7 @@ from PURVIMUSIC.utils.inline import (
 )
 from PURVIMUSIC.utils.logger import play_logs
 from PURVIMUSIC.utils.stream.stream import stream
-from config import BANNED_USERS, lyrical, DKPV
+from config import BANNED_USERS, lyrical, AYU
 
 
 @app.on_message(
@@ -44,7 +44,7 @@ async def play_commnd(
     fplay,
 ):
     mystic = await message.reply_text(
-        _["play_2"].format(channel) if channel else random.choice(DKPV)
+        _["play_2"].format(channel) if channel else random.choice(AYU)
     )
     plist_id = None
     slider = None
