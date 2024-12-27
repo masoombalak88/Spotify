@@ -30,15 +30,12 @@ from strings import get_string
 
 NEXI_VID = [
 "https://files.catbox.moe/wc5izp.mp4",
-"https://files.catbox.moe/7pdo67.mp4",
-"https://files.catbox.moe/69n2ky.mp4",
-"https://files.catbox.moe/e3mn4l.mp4",
 "https://files.catbox.moe/i3m3ow.mp4",
-"https://files.catbox.moe/knyqc7.mp4",
-"https://files.catbox.moe/lk2rwu.mp4",
-"https://files.catbox.moe/wtbd4h.mp4",
-"https://files.catbox.moe/42zyc6.mp4",
-"https://files.catbox.moe/vvxf8h.mp4",
+"https://files.catbox.moe/a03jy2.mp4",
+"https://files.catbox.moe/cyzy1b.mp4",
+"https://files.catbox.moe/euugzf.mp4",
+"https://files.catbox.moe/rlgemf.mp4",
+"https://files.catbox.moe/7pdo67.mp4",
     
 ]
 
